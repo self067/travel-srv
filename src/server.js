@@ -1,26 +1,36 @@
-import express from "express"
-import bodyParser from "body-parser"
-import cors from "cors"
-import morgan from "morgan"
-import movies from "../src/api/movies.route"
-import users from "../src/api/users.route"
+import express from 'express';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import morgan from 'morgan';
+import swaggerUI from 'swagger-ui-express';
+import YAML from 'yamljs';
+import path from 'path';
+import countries from './api/countries.route';
+import users from '../src/api/users.route';
 
-const app = express()
+const swaggerDocument = YAML.load(
+  path.join(__dirname, '../doc/travelsrv.yaml')
+);
+const app = express();
 
-app.use(cors())
-process.env.NODE_ENV !== "prod" && app.use(morgan("dev"))
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(cors());
+process.env.NODE_ENV !== 'prod' && app.use(morgan('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Register api routes
-app.use("/api/v1/movies", movies)
-app.use("/api/v1/user", users)
-app.use("/status", express.static("build"))
-app.use("/", express.static("build"))
-app.use("*", (req, res) => {
-console.log(req, res);
-res.status(404).json({ error: "not found" })
+app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+app.use('/countries', countries);
+app.use('/user', users);
 
+app.use('/', (req, res, next) => {
+  if (req.originalUrl === '/') {
+    res.send('Service is running!');
+    return;
+  }
+  next();
 });
 
-export default app
+app.use('*', (req, res) => res.status(404).json({ error: 'not found' }));
+
+export default app;

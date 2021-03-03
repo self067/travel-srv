@@ -8,22 +8,22 @@ export default class CommentsDAO {
       return
     }
     try {
-      comments = await conn.db(process.env.MFLIX_NS).collection("comments")
+      comments = await conn.db(process.env.TRAVEL_NS).collection("comments")
     } catch (e) {
       console.error(`Unable to establish collection handles in userDAO: ${e}`)
     }
   }
 
 /**
-   * @param {string} movieId - The _id of the movie in the `movies` collection.
+   * @param {string} counryId - The _id of the country in the `countries` collection.
    * @param {Object} user - An object containing the user's name and email.
    * @param {string} comment - The text of the comment.
    * @param {string} date - The date on which the comment was posted.
    * @returns {DAOResponse} Returns an object with either DB response or "error"
    */
-  static async addComment(movieId, user, comment, date) {
+  static async addComment(countryId, user, comment, date) {
     try {
-      const commentDoc = { movie_id: ObjectId(movieId), name: user.name, email: user.email,
+      const commentDoc = { country_id: ObjectId(countryId), name: user.name, email: user.email,
 	text: comment, date };
 
       return await comments.insertOne(commentDoc)

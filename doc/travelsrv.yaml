@@ -1,0 +1,18 @@
+openapi: '3.0.2'
+info:
+  title: Travel App API
+  version: '1.0'
+servers:
+  - url: https://localhost:5000/v1
+paths:
+  /api/v1/countries:
+    get:
+      description:
+      responses:
+        '200':
+          description: OK
+  /test:
+    get:
+      responses:
+        '200':
+          description: OK

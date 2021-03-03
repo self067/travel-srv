@@ -1,13 +1,13 @@
 import app from './server';
 import { MongoClient } from 'mongodb';
-import MoviesDAO from '../src/dao/moviesDAO';
+import CountriesDAO from './dao/countriesDAO';
 import UsersDAO from './dao/usersDAO';
 import CommentsDAO from './dao/commentsDAO';
 
 const port = process.env.PORT || 8000;
 const poolSize = 100;
 
-MongoClient.connect(process.env.MFLIX_DB_URI, {
+MongoClient.connect(process.env.TRAVEL_DB_URI, {
   poolSize,
   useNewUrlParser: true,
   writeConcern: { wtimeout: 3500 },
@@ -18,7 +18,7 @@ MongoClient.connect(process.env.MFLIX_DB_URI, {
     process.exit(1);
   })
   .then(async (client) => {
-    await MoviesDAO.injectDB(client);
+    await CountriesDAO.injectDB(client);
     await UsersDAO.injectDB(client);
     await CommentsDAO.injectDB(client);
     app.listen(port, () => {
