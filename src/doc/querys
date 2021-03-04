@@ -1,0 +1,24 @@
+{
+  from: 'sights',
+  let: { cid: '$_id'},
+  pipeline: [
+    {
+      $match:{
+        $expr:{
+          $eq:['$countryId', '$$cid'],
+          },},},],
+  as: 'sights'
+}
+
+
+{
+  from: 'rating',
+  let: { rid: '$_id'},
+  pipeline: [
+    {
+      $match:{
+        $expr:{
+          $eq:['$sightId', '$$rid'],
+          },},},],
+  as: 'rating'
+}

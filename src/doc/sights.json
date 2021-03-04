@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "6041118fccccd212e4fced10"
+  },
+  "countryId": {
+    "$oid": "6040f463ccccd212e4fced0b"
+  },
+  "name": {
+    "en": "Fushimi-inari shrine (Kyoto)",
+    "ru": "Храм Фусими-инари (г.Киото)",
+    "de": "Fushimi-Inari-Schrein (Kyoto)",
+    "es": "Sanktejo Fushimi-inari (Kioto)"
+  },
+  "image": "https://cdn.tripzaza.com/ru/destinations/wp-content/uploads/2017/04/Japan-1-Fushimi-inari-shrine-e1492919577704.jpg",
+  "description": {
+    "en": "One of the historical symbols of Japan is the Fushimi-Inari Temple, or the Thousand Scarlet Gates Shrine, dedicated to the goddess of rice fertility. The grandiose tunnels with portals for the gods were created according to the Shinto beliefs. The Japanese believe that visiting the Fushimi-Inari Shrine brings success and prosperity. Don't doubt what to see in Japan. The features of the sacred complex in Kyoto Prefecture will leave a lasting impression:",
+    "ru": "Одним из исторических символов Японии считается Храм Фусими-Инари или Святилище из тысячи алых ворот, посвященное богине рисового плодородия. Грандиозные тоннели с порталами, предназначенными для богов, создавались, согласно верованию синтоизма. Японцы считают, что посещение Храма Фусими-Инари приносит успех и процветание. Не сомневайтесь, что посмотреть в Японии. Особенности священного комплекса в префектуре Киото оставят неизгладимое впечатление:",
+    "de": "Eines der historischen Symbole Japans ist der Fushimi-Inari-Tempel oder der Schrein der Tausend Scharlachroten Tore, der der Göttin der Reisfruchtbarkeit gewidmet ist. Die grandiosen Tunnel mit Portalen für die Götter wurden nach shintoistischem Glauben geschaffen. Die Japaner glauben, dass der Besuch des Fushimi-Inari-Tempels Erfolg und Wohlstand bringt. Zweifle nicht daran, was es in Japan zu sehen gibt. Die Merkmale des heiligen Komplexes in der Präfektur Kyoto werden einen bleibenden Eindruck hinterlassen:",
+    "es": "Unu el la historiaj simboloj de Japanio estas la Templo Fushimi-Inari, aŭ la Sanktejo Mil Skarlataj Pordegoj, dediĉita al la diino de riza fekundeco. La grandiozaj tuneloj kun portaloj por la dioj estis kreitaj laŭ la ŝintoismaj kredoj. Japanoj kredas, ke viziti la Templon Fushimi-Inari alportas sukceson kaj prosperon. Ne dubu, kion vidi en Japanio. La trajtoj de la sankta komplekso en Kiota Gubernio lasos daŭran impreson:"
+  },
+  "location": {
+    "address": {
+      "city": "Vacaville",
+      "street1": "1621 E Monte Vista Ave"
+    },
+    "geo": [
+      -121.96328,
+      38.367649
+    ]
+  }
+}]

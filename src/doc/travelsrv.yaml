@@ -1,0 +1,68 @@
+openapi: '3.0.2'
+info:
+  title: Travel App API
+  version: '1.0'
+servers:
+  - url: http://localhost:5000/
+paths:
+  /sights:
+    get:
+      description: 'sights'
+      responses:
+        '200':
+          description: OK
+  /rating:
+    get:
+      description: 'rating'
+      responses:
+        '200':
+          description: OK
+  /users:
+    get:
+      description: 'users'
+      responses:
+        '200':
+          description: OK
+  /countries:
+    get:
+      description: 'countries'
+      responses:
+        '200':
+          description: OK
+  /countries/id/{id}:
+    get:
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      description: 'Get country by ID'
+      responses:
+        '200':
+          description: OK
+  /countries/sights/{countryId}:
+    get:
+      parameters:
+        - in: path
+          name: countryId
+          required: true
+          schema:
+            type: string
+      description: 'Get Sights by countryID'
+      responses:
+        '200':
+          description: OK
+
+  /sights/{sightId}:
+    get:
+      parameters:
+        - in: path
+          name: sightId
+          required: true
+          schema:
+            type: string
+      description: 'Get Sight by sightID'
+      responses:
+        '200':
+          description: OK
