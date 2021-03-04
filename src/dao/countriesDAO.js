@@ -12,7 +12,6 @@ export default class CountriesDAO {
     try {
       travel = await conn.db(process.env.TRAVEL_NS);
       countries = await conn.db(process.env.TRAVEL_NS).collection('countries');
-      this.countries = countries; // this is only for testing
     } catch (e) {
       console.error(
         `Unable to establish a collection handle in countriesDAO: ${e}`
@@ -21,24 +20,6 @@ export default class CountriesDAO {
   }
 
   /**
-   * Retrieves the connection pool size, write concern and user roles on the
-   * current client.
-   * @returns {Promise<ConfigurationResult>} An object with configuration details.
-   */
-  static async getConfiguration() {
-    const roleInfo = await travel.command({ connectionStatus: 1 });
-    const authInfo = roleInfo.authInfo.authenticatedUserRoles[0];
-    const { poolSize, wtimeout } = countries.s.db.serverConfig.s.options;
-    let response = {
-      poolSize,
-      wtimeout,
-      authInfo,
-    };
-    return response;
-  }
-
-  /**
-   
    * Returns a list of objects, each object contains a title and an _id.
    * @param {string[]} params
    * @returns {Promise<CountryResult>} A promise that will resolve to a list of CountryResults.
@@ -239,7 +220,7 @@ export default class CountriesDAO {
   /**
    * Gets a coutry by its id
    * @param {string} id - The desired country id, the _id in Mongo
-   * @returns {TravelCoutry | null} Returns either a single coutry or nothing
+   * @returns {TravelCountry | null} Returns either a single country or nothing
    */
 
   static async getCountryByID(id) {
@@ -252,13 +233,13 @@ export default class CountriesDAO {
         },
         {
           $lookup: {
-            from: 'comments',
+            from: 'sights',
             let: { id: '$_id' },
             pipeline: [
               {
                 $match: {
                   $expr: {
-                    $eq: ['$country_id', '$$id'],
+                    $eq: ['$countryId', '$$id'],
                   },
                 },
               },
@@ -268,7 +249,7 @@ export default class CountriesDAO {
                 },
               },
             ],
-            as: 'comments',
+            as: 'sights',
           },
         },
       ];
@@ -289,4 +270,3 @@ export default class CountriesDAO {
     }
   }
 }
-

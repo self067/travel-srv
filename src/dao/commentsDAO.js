@@ -1,35 +1,41 @@
-import { ObjectId } from "bson"
+import { ObjectId } from 'bson';
 
-let comments
+let comments;
 
 export default class CommentsDAO {
   static async injectDB(conn) {
     if (comments) {
-      return
+      return;
     }
     try {
-      comments = await conn.db(process.env.TRAVEL_NS).collection("comments")
+      comments = await conn.db(process.env.TRAVEL_NS).collection('comments');
     } catch (e) {
-      console.error(`Unable to establish collection handles in userDAO: ${e}`)
+      console.error(`Unable to establish collection handles in userDAO: ${e}`);
     }
   }
 
-/**
+  /**
    * @param {string} counryId - The _id of the country in the `countries` collection.
    * @param {Object} user - An object containing the user's name and email.
    * @param {string} comment - The text of the comment.
+   * @param {number} rating - The rating.
    * @param {string} date - The date on which the comment was posted.
    * @returns {DAOResponse} Returns an object with either DB response or "error"
    */
-  static async addComment(countryId, user, comment, date) {
+  static async addComment(sightId, user, comment, rating, date) {
     try {
-      const commentDoc = { country_id: ObjectId(countryId), name: user.name, email: user.email,
-	text: comment, date };
+      const commentDoc = {
+        country_id: ObjectId(countryId),
+        name: user.name,
+        email: user.email,
+        text: comment,
+        date,
+      };
 
-      return await comments.insertOne(commentDoc)
+      return await comments.insertOne(commentDoc);
     } catch (e) {
-      console.error(`Unable to post comment: ${e}`)
-      return { error: e }
+      console.error(`Unable to post comment: ${e}`);
+      return { error: e };
     }
   }
 
@@ -46,28 +52,28 @@ export default class CommentsDAO {
   static async updateComment(commentId, userEmail, text, date) {
     try {
       const updateResponse = await comments.updateOne(
-        { "_id": commentId, email: userEmail },
-        { $set: { text, date } },
-      )
+        { _id: commentId, email: userEmail },
+        { $set: { text, date } }
+      );
 
-      return updateResponse
+      return updateResponse;
     } catch (e) {
-      console.error(`Unable to update comment: ${e}`)
-      return { error: e }
+      console.error(`Unable to update comment: ${e}`);
+      return { error: e };
     }
   }
 
   static async deleteComment(commentId, userEmail) {
-
     try {
       const deleteResponse = await comments.deleteOne({
-        _id: ObjectId(commentId), email: userEmail 
-      })
+        _id: ObjectId(commentId),
+        email: userEmail,
+      });
 
-      return deleteResponse
+      return deleteResponse;
     } catch (e) {
-      console.error(`Unable to delete comment: ${e}`)
-      return { error: e }
+      console.error(`Unable to delete comment: ${e}`);
+      return { error: e };
     }
   }
 
@@ -79,34 +85,35 @@ export default class CommentsDAO {
     email in the `comments` collection.
     */
     try {
-      // Return the 20 users who have commented the most 
-      const pipeline =  
-	[
-	  {
-	    '$project': {
-	      'email': 1, 
-	      '_id': 0
-	    }
-	  }, {
-	    '$group': {
-	      '_id': '$email', 
-	      'count': {
-	        '$sum': 1
-	      }
-	    }
-	  },{ $sort: { count: -1} },
-		{$limit: 20}
-	];
+      // Return the 20 users who have commented the most
+      const pipeline = [
+        {
+          $project: {
+            email: 1,
+            _id: 0,
+          },
+        },
+        {
+          $group: {
+            _id: '$email',
+            count: {
+              $sum: 1,
+            },
+          },
+        },
+        { $sort: { count: -1 } },
+        { $limit: 20 },
+      ];
 
-      const readConcern = { level: "majority" }; //comments.readConcern
+      const readConcern = { level: 'majority' }; //comments.readConcern
       const aggregateResult = await comments.aggregate(pipeline, {
         readConcern,
-      })
+      });
 
-      return await aggregateResult.toArray()
+      return await aggregateResult.toArray();
     } catch (e) {
-      console.error(`Unable to retrieve most active commenters: ${e}`)
-      return { error: e }
+      console.error(`Unable to retrieve most active commenters: ${e}`);
+      return { error: e };
     }
   }
 }

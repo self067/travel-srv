@@ -6,11 +6,10 @@ import swaggerUI from 'swagger-ui-express';
 import YAML from 'yamljs';
 import path from 'path';
 import countries from './api/countries.route';
-import users from '../src/api/users.route';
+import users from './api/users.route';
+// import sights from './api/sights.route'; //  ???
 
-const swaggerDocument = YAML.load(
-  path.join(__dirname, '../doc/travelsrv.yaml')
-);
+const swaggerDocument = YAML.load(path.join(__dirname, 'doc/travelsrv.yaml'));
 const app = express();
 
 app.use(cors());
@@ -21,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Register api routes
 app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 app.use('/countries', countries);
-app.use('/user', users);
+app.use('/users', users);
 
 app.use('/', (req, res, next) => {
   if (req.originalUrl === '/') {
