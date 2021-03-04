@@ -3,16 +3,29 @@ info:
   title: Travel App API
   version: '1.0'
 servers:
-  - url: https://localhost:5000/v1
+  - url: http://localhost:5000/
 paths:
-  /api/v1/countries:
+  /sights:
     get:
-      description:
+      description: 'sights'
       responses:
         '200':
           description: OK
-  /test:
+  /rating:
     get:
+      description: 'rating'
+      responses:
+        '200':
+          description: OK
+  /users:
+    get:
+      description: 'users'
+      responses:
+        '200':
+          description: OK
+  /countries:
+    get:
+      description: 'countries'
       responses:
         '200':
           description: OK

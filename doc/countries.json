@@ -1,0 +1,30 @@
+[
+  {
+    "_id": {
+      "$oid": "6040f463ccccd212e4fced0b"
+    },
+    "country": {
+      "en": "Japan",
+      "ru": "Япония",
+      "de": "Japan",
+      "es": "Japanio"
+    },
+    "capital": {
+      "en": "Tokyo",
+      "ru": "Токио",
+      "de": "Tokio",
+      "es": "Tokio"
+    },
+    "image": "http://srednyvek.ru/img/224927_1600/59700728.jpg",
+    "description": {
+      "en": "Japan (Japanese 日本 Nihon, Nippon, literally “the place where the Sun rises” [8]), the official name is the State of Japan (Japanese 日本国 “Nihon Koku”, “Nippon Koku” (inf.)), - island state in East Asia. Located in the Pacific Ocean east of the Sea of Japan, China, North and South Korea, Russia. It occupies the territory from the Sea of Okhotsk in the north to the East China Sea and Taiwan in the south. The poetic name is the Land of the Rising Sun.",
+      "ru": "Япо́ния (яп. 日本 Нихон, Ниппон, букв. «место, где восходит Солнце»[8]), официальное название — Госуда́рство Япо́ния (яп. 日本国 «Нихон коку», «Ниппон коку» (инф.)), — островное государство в Восточной Азии. Находится в Тихом океане к востоку от Японского моря, Китая, Северной и Южной Кореи, России. Занимает территорию от Охотского моря на севере до Восточно-Китайского моря и Тайваня на юге. Поэтическое название — Страна восходящего солнца.",
+      "de": "Japan (Japanisch ih Nihon, Nippon, wörtlich „der Ort, an dem die Sonne aufgeht“ [8]), der offizielle Name ist der Staat Japan (Japanisch 日本国 „Nihon Koku“, „Nippon Koku“ (inf.)), - Inselstaat in Ostasien. Das Hotel liegt im Pazifischen Ozean östlich des Japanischen Meeres, China, Nord- und Südkorea, Russland. Besetzt ein Gebiet vom Ochotskischen Meer im Norden bis zum Ostchinesischen Meer und Taiwan im Süden. Der poetische Name ist das Land der aufgehenden Sonne.",
+      "es": "Japanio (japane 日本 Nihon, Nippon, laŭvorte 'la loko kie leviĝas la Suno' [8]), la oficiala nomo estas la Ŝtato Japanio (japane 日本国 'Nihon Koku', 'Nippon Koku' (inf.)), - insulŝtato en orienta Azio. Situante en la Pacifiko oriente de la Japana Maro, Ĉinio, Norda kaj Sud-Koreio, Rusio. Okupas areon de la Ohototska Maro norde ĝis la Orienta Ĉina Maro kaj Tajvano sude. La poezia nomo estas la Lando de la Leviĝanta Suno."
+    },
+    "lastupdated": {
+      "$date": "2015-08-17T22:03:15.313Z"
+    },
+    "geo": [35.7, 139.5528]
+  }
+]
