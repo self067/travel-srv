@@ -6,9 +6,7 @@
   "scripts": {
     "start": "nodemon -L ./index.js",
     "test": "jest --passWithNoTests",
-    "test:watch": "jest --passWithNoTests --watch",
-    "changestream:update": "node test/lessons/change-updates.js",
-    "changestream:insert": "node test/lessons/change-insert.js"
+    "test:watch": "jest --passWithNoTests --watch"
   },
   "husky": {
     "hooks": {

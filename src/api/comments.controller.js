@@ -41,37 +41,12 @@ export default class CommentsController {
     // let paramList = Array.isArray(params) ? params : Array(params);
     let commentsList = await CommentsDAO.getCommentsBySightId(sightId);
 
-    // let response = {
-    //   comments: commentsList,
-    // };
+    let response = {
+      comments: commentsList,
+    };
     // console.log('comments=', commentsList);
 
-    res.json(commentsList);
-  }
-
-  static async apiGetCommentsBySightIdBad(req, res, next) {
-    try {
-      const sightId = req.params.sightId;
-
-      console.log('apiGetCommentsBySightId=', sightId);
-
-      const commentResponse = await CommentsDAO.getCommentsBySightId(
-        ObjectId(sightId)
-      );
-
-      console.log('commentResponse=', commentResponse);
-
-      const { error } = commentResponse;
-      if (error) {
-        res.status(400).json({ error });
-      }
-
-      // console.log(commentResponse);
-
-      res.json({ comments: commentResponse });
-    } catch (e) {
-      res.status(400).json({ e });
-    }
+    res.json(response);
   }
 
   static async apiUpdateComment(req, res, next) {

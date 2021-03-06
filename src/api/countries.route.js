@@ -1,7 +1,6 @@
 import { Router } from 'express';
 import CountriesCtrl from './countries.controller';
 import CommentsCtrl from './comments.controller';
-// import SightsCtrl from './sights.controller';
 
 const router = new Router();
 
@@ -11,7 +10,8 @@ router.route('/search').get(CountriesCtrl.apiSearchCountries);
 router.route('/params').get(CountriesCtrl.apiGetCountriesByParams);
 router.route('/facet-search').get(CountriesCtrl.apiFacetedSearch);
 router.route('/id/:id').get(CountriesCtrl.apiGetCountryById);
-router.route('/sights/:id').get(CommentsCtrl.apiGetCommentsBySightId);
+
+router.route('/sights/:sightId').get(CommentsCtrl.apiGetCommentsBySightId);
 
 // router
 //   .route('/comment')
