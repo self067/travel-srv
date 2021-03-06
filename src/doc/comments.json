@@ -1,7 +1,4 @@
 [{
-  "_id": {
-    "$oid": "604117d5ccccd212e4fced11"
-  },
   "sightId": {
     "$oid": "6041118fccccd212e4fced10"
   },
@@ -10,5 +7,16 @@
   "text": "Iure laboriosam quo et necessitatibus sed. Id iure delectus soluta. Quaerat officiis maiores commodi earum. Autem odio labore debitis optio libero.",
   "date": {
     "$date": "2021-02-15T05:54:02Z"
+  }
+},
+{
+  "sightId": {
+    "$oid": "6041118fccccd212e4fced10"
+  },
+  "email": "seltor@mail.ru",
+  "rating": 4,
+  "text": "Iure laboriosam quo et necessitatibus sed. Id iure delectus soluta. Quaerat officiis maiores commodi earum. Autem odio labore debitis optio libero.",
+  "date": {
+    "$date": "2021-03-15T05:54:02Z"
   }
 }]

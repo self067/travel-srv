@@ -14,6 +14,44 @@ export default class CommentsDAO {
     }
   }
 
+  static async getCommentsBySightId(sightId) {
+    console.log('getCommentsBySightId=', sightId);
+
+    let cursor;
+    try {
+      const sight = { sightId: ObjectId(sightId) };
+      cursor = await comments.find(sight);
+
+      // .find({ params: { $in: params } })
+      // .project({ title: 1 }); //.limit(1)
+    } catch (e) {
+      console.error(`Unable to find comments, ${e}`);
+      return [];
+    }
+
+    return cursor.toArray();
+  }
+
+  static async getCommentsBySightIdBad(sightId) {
+    console.log('getCommentsBySightId=', sightId);
+    try {
+      const sight = { sightId: ObjectId('6041118fccccd212e4fced10') };
+      //   sightId: sightId,
+      // };
+      const sight2 = { sightId: sightId };
+
+      console.log('getCommentsBySightId=', sightId, sight, sight2);
+
+      const rrr = await comments.find();
+      console.log('rrr=', rrr);
+      return rrr;
+      return await comments.find(sight);
+    } catch (e) {
+      console.error(`Unable to get comments: ${e}`);
+      return { error: e };
+    }
+  }
+
   /**
    * @param {string} counryId - The _id of the country in the `countries` collection.
    * @param {Object} user - An object containing the user's name and email.
@@ -29,6 +67,7 @@ export default class CommentsDAO {
         name: user.name,
         email: user.email,
         text: comment,
+        rating,
         date,
       };
 

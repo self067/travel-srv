@@ -9,7 +9,7 @@ export default class CommentsController {
     try {
       const userJwt = req.get('Authorization').slice('Bearer '.length);
       const user = await User.decoded(userJwt);
-      var { error } = user;
+      const { error } = user;
       if (error) {
         res.status(401).json({ error });
         return;
@@ -34,11 +34,51 @@ export default class CommentsController {
     }
   }
 
+  static async apiGetCommentsBySightId(req, res, next) {
+    // params was countries
+    // console.log('apiGetCommentsBySightId=', req.route.path, req.params.sightId);
+    let sightId = req.params.sightId;
+    // let paramList = Array.isArray(params) ? params : Array(params);
+    let commentsList = await CommentsDAO.getCommentsBySightId(sightId);
+
+    // let response = {
+    //   comments: commentsList,
+    // };
+    // console.log('comments=', commentsList);
+
+    res.json(commentsList);
+  }
+
+  static async apiGetCommentsBySightIdBad(req, res, next) {
+    try {
+      const sightId = req.params.sightId;
+
+      console.log('apiGetCommentsBySightId=', sightId);
+
+      const commentResponse = await CommentsDAO.getCommentsBySightId(
+        ObjectId(sightId)
+      );
+
+      console.log('commentResponse=', commentResponse);
+
+      const { error } = commentResponse;
+      if (error) {
+        res.status(400).json({ error });
+      }
+
+      // console.log(commentResponse);
+
+      res.json({ comments: commentResponse });
+    } catch (e) {
+      res.status(400).json({ e });
+    }
+  }
+
   static async apiUpdateComment(req, res, next) {
     try {
       const userJwt = req.get('Authorization').slice('Bearer '.length);
       const user = await User.decoded(userJwt);
-      var { error } = user;
+      let { error } = user;
       if (error) {
         res.status(401).json({ error });
         return;
@@ -55,7 +95,7 @@ export default class CommentsController {
         date
       );
 
-      var { error } = commentResponse;
+      error = commentResponse.error;
       if (error) {
         res.status(400).json({ error });
       }
@@ -79,7 +119,7 @@ export default class CommentsController {
     try {
       const userJwt = req.get('Authorization').slice('Bearer '.length);
       const user = await User.decoded(userJwt);
-      var { error } = user;
+      const { error } = user;
       if (error) {
         res.status(401).json({ error });
         return;
@@ -105,7 +145,7 @@ export default class CommentsController {
     try {
       const userJwt = req.get('Authorization').slice('Bearer '.length);
       const user = await User.decoded(userJwt);
-      var { error } = user;
+      const { error } = user;
       if (error) {
         res.status(401).json({ error });
         return;
