@@ -35,16 +35,12 @@ export default class CommentsController {
   }
 
   static async apiGetCommentsBySightId(req, res, next) {
-    // params was countries
-    // console.log('apiGetCommentsBySightId=', req.route.path, req.params.sightId);
     let sightId = req.params.sightId;
-    // let paramList = Array.isArray(params) ? params : Array(params);
     let commentsList = await CommentsDAO.getCommentsBySightId(sightId);
 
     let response = {
       comments: commentsList,
     };
-    // console.log('comments=', commentsList);
 
     res.json(response);
   }
