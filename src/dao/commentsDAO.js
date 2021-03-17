@@ -15,8 +15,6 @@ export default class CommentsDAO {
   }
 
   static async getCommentsBySightId(sightId) {
-    console.log('getCommentsBySightId=', sightId);
-
     let cursor;
     try {
       const sight = { sightId: ObjectId(sightId) };
@@ -32,48 +30,19 @@ export default class CommentsDAO {
     return cursor.toArray();
   }
 
-  static async addComment(sightId, user, comment, rating, date) {
+  static async addComment(sightId, email, rating, comment, date) {
     try {
       const commentDoc = {
-        country_id: ObjectId(countryId),
-        name: user.name,
-        email: user.email,
-        text: comment,
+        sight_id: ObjectId(sightId),
+        email,
         rating,
+        comment,
         date,
       };
 
       return await comments.insertOne(commentDoc);
     } catch (e) {
       console.error(`Unable to post comment: ${e}`);
-      return { error: e };
-    }
-  }
-
-  static async updateComment(commentId, userEmail, text, date) {
-    try {
-      const updateResponse = await comments.updateOne(
-        { _id: commentId, email: userEmail },
-        { $set: { text, date } }
-      );
-
-      return updateResponse;
-    } catch (e) {
-      console.error(`Unable to update comment: ${e}`);
-      return { error: e };
-    }
-  }
-
-  static async deleteComment(commentId, userEmail) {
-    try {
-      const deleteResponse = await comments.deleteOne({
-        _id: ObjectId(commentId),
-        email: userEmail,
-      });
-
-      return deleteResponse;
-    } catch (e) {
-      console.error(`Unable to delete comment: ${e}`);
       return { error: e };
     }
   }

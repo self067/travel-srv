@@ -1,0 +1,43 @@
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
++++++++++++++++++++++++++++++********************************
+Download and install the Heroku CLI.
+
+If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
+
+$ heroku login
+Clone the repository
+Use Git to clone travel-srv's source code to your local machine.
+
+$ heroku git:clone -a travel-srv
+$ cd travel-srv
+Deploy your changes
+Make some changes to the code you just cloned and deploy them to Heroku using Git.
+
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku main
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+$ heroku login
+ »   Warning: heroku update available from 7.42.8 to 7.47.11.
+heroku: Press any key to open up the browser to login or q to exit:
+Opening browser to https://cli-auth.heroku.com/auth/cli/browser/94200ffd-4637-421a-a2c8-b757cd33e85f?requestor=SFMyNTY.g2gDbQAAAA0zMS4xMzIuMTc2LjI2bgYAO9udBngBYgABUYA.EO08o8WO3EndKLed8tdUL6PjBRNkqZd_GjFKHHfj9_s
+Logging in... done
+Logged in as seltor@mail.ru
+
+ok@DESKTOP-G9PU5HK MINGW64 /c/_prj/-rss/travel-srv (develop)       
+
+$ heroku create
+ »   Warning: heroku update available from 7.42.8 to 7.47.11.
+Creating app... done,  safe-river-10509
+https://safe-river-10509.herokuapp.com/ | https://git.heroku.com/safe-river-10509.git
+
+
+$ git push heroku main
+
+heroku ps:scale web=1
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+git remote add heroku HEROKU_URL

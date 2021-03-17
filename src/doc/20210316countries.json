@@ -1,0 +1,392 @@
+[{
+  "_id": {
+    "$oid": "6049c7583cba373d7cbea5a3"
+  },
+  "country": {
+    "en": "Egypt",
+    "ru": "Египет",
+    "de": "Ägypten",
+    "tr": "Mısır"
+  },
+  "capital": {
+    "en": "Cairo",
+    "ru": "Каир",
+    "de": "Kairo",
+    "tr": "Kahire"
+  },
+  "iso": "EG",
+  "timezone": 2,
+  "currency": "EGP",
+  "currencyname": {
+    "en": "Egyptian Pound",
+    "ru": "Египетский фунт",
+    "de": "Ägyptisches Pfund",
+    "tr": "Mısır Lirası"
+  },
+  "image": "https://cdn.tripzaza.com/ru/destinations/wp-content/uploads/2017/04/Egypt-1-Giza-Pyramid-e1491277079103.jpg",
+  "video": "https://www.youtube.com/embed/mfxQy5A_tHs",
+  "text": {
+    "en": "Egypt is a fabulous land of pyramids, mummies, temples, pharaohs. The sights of Egypt beckon into the depths of the centuries, forcing you to plunge into the history of antiquity and imbued with the spirit of those times.",
+    "ru": "Египет — сказочная земля пирамид, мумий, храмов, фараонов. Достопримечательности Египта манят вглубь веков, заставляя окунуться в историю древности и проникнуться духом тех времен.",
+    "de": "Ägypten ist ein fabelhaftes Land der Pyramiden, Mumien, Tempel und Pharaonen. Die Sehenswürdigkeiten Ägyptens locken in die Tiefen der Jahrhunderte und zwingen Sie, in die Geschichte der Antike einzutauchen und vom Geist dieser Zeit durchdrungen zu sein.",
+    "tr": "Mısır muhteşem bir piramit, mumya, tapınak, firavun ülkesidir. Mısır'ın manzaraları, yüzyılların derinliklerine işaret ediyor, sizi antik tarihin içine dalmaya zorluyor ve o zamanların ruhuyla dolu."
+  },
+  "description": {
+    "en": "Egypt is a fabulous land of pyramids, mummies, temples, pharaohs. The sights of Egypt beckon into the depths of the centuries, forcing you to plunge into the history of antiquity and imbued with the spirit of those times. Modernity and antiquity wonderfully coexist here with each other, giving this land a bewitching magical look. The country is distinguished by its originality, loyalty to traditions and a characteristic oriental flavor. The dry and hot climate allows you to come here on vacation in any season: even in the winter months, the sea water temperature is above 20 degrees. The sights of Egypt will undoubtedly not leave anyone indifferent.",
+    "ru": "Египет — сказочная земля пирамид, мумий, храмов, фараонов. Достопримечательности Египта манят вглубь веков, заставляя окунуться в историю древности и проникнуться духом тех времен. Современность и старина удивительным образом уживаются здесь друг с другом, придавая этой земле завораживающе волшебный вид. Страну отличает самобытность, верность традициям и характерный восточный колорит. Сухой и жаркий климат позволяет приезжать сюда на отдых в любой сезон: даже в зимние месяцы температура воды в море держится выше 20 градусов. Достопримечательности Египта, несомненно, не оставят никого равнодушным.",
+    "de": "Ägypten ist ein fabelhaftes Land der Pyramiden, Mumien, Tempel und Pharaonen. Die Sehenswürdigkeiten Ägyptens locken in die Tiefen der Jahrhunderte und zwingen Sie, in die Geschichte der Antike einzutauchen und in den Geist dieser Zeit einzutauchen. Moderne und Antike koexistieren hier wunderbar miteinander und verleihen diesem Land einen bezaubernden magischen Look. Das Land zeichnet sich durch Originalität, Traditionstreue und einen charakteristischen orientalischen Geschmack aus. Das trockene und heiße Klima ermöglicht es Ihnen, zu jeder Jahreszeit in den Urlaub zu kommen: Selbst in den Wintermonaten liegt die Meerwassertemperatur über 20 Grad. Die Sehenswürdigkeiten Ägyptens werden zweifellos niemanden gleichgültig lassen.",
+    "tr": "Mısır muhteşem bir piramit, mumya, tapınak, firavun ülkesidir. Mısır'ın manzaraları yüzyılların derinliklerine işaret ediyor, sizi antik tarihin içine dalmaya zorluyor ve o zamanların ruhuyla dolu. Modernite ve antik çağ burada birbirleriyle harika bir şekilde bir arada var olur ve bu topraklara büyüleyici bir büyülü görünüm verir. Ülke, özgünlüğü, geleneklere sadakati ve karakteristik bir oryantal tadı ile ayırt edilir. Kuru ve sıcak iklim, her mevsim tatile gelmenizi sağlar: kış aylarında bile deniz suyu sıcaklığı 20 derecenin üzerindedir. Mısır'ın manzaraları şüphesiz kimseyi kayıtsız bırakmayacak."
+  },
+  "geo": [
+    26.8666,
+    29.8699
+  ],
+  "capitalgeo": [
+    30.05058,
+    31.2302
+  ],
+  "sliderimg": "https://i.pinimg.com/736x/4c/af/02/4caf02696cf36912b049216beeb09d48.jpg",
+  "zoom": 5
+},{
+  "_id": {
+    "$oid": "6049c7583cba373d7cbea5a0"
+  },
+  "country": {
+    "en": "United Arab Emirates",
+    "ru": "Объединенные Арабские Эмираты",
+    "de": "Vereinigte Arabische Emirate",
+    "tr": "Birleşik Arap Emirlikleri"
+  },
+  "capital": {
+    "en": "Dubai",
+    "ru": "Дубай",
+    "de": "Dubai",
+    "tr": "Dubai"
+  },
+  "iso": "AE",
+  "timezone": 4,
+  "currency": "AED",
+  "currencyname": {
+    "en": "UAE dirham",
+    "ru": "Дирхам ОАЭ",
+    "de": "VAE Dirham",
+    "tr": "BAE dirhemi"
+  },
+  "image": "https://cdn.tripzaza.com/ru/destinations/wp-content/uploads/2017/07/Depositphotos_134927690_m-2015-e1500440139732.jpg",
+  "video": "https://www.youtube.com/embed/WRANzaW-x90",
+  "text": {
+    "en": "The UAE is a fabulous country where, among the sands of an endless desert, skyscrapers of glass and metal take off into the sky; a place where ancient customs are combined with the latest technology.",
+    "ru": "ОАЭ — сказочная страна, где среди песков бесконечной пустыни в небо взлетают небоскребы из стекла и металла; место, где старинные обычаи сочетаются с новейшими технологиями.",
+    "de": "Die VAE sind ein fabelhaftes Land, in dem inmitten des Sandes einer endlosen Wüste Wolkenkratzer aus Glas und Metall in den Himmel ragen. Ein Ort, an dem alte Bräuche mit der neuesten Technologie kombiniert werden.",
+    "tr": "BAE, sonsuz bir çölün kumları arasında cam ve metal gökdelenlerin gökyüzüne yükseldiği muhteşem bir ülkedir; eski geleneklerin en son teknolojiyle birleştiği bir yer."
+  },
+  "description": {
+    "en": "The UAE is a fabulous country where, among the sands of an endless desert, skyscrapers of glass and metal take off into the sky; a place where ancient customs are combined with the latest technology. If you love excellent hotel service, shopping from morning to evening, swimming in the eternally warm sea and are picky about the choice of entertainment, this is the place for you. The Emirates has the world's largest aquarium, a ski resort in the desert, an amazingly beautiful mosque and, of course, many shopping centers with thousands of shops. In the UAE, there is no bad weather or low season - because here, in November or in July, there are luxury hotels for quality rest and excellent shopping at attractive prices.",
+    "ru": "ОАЭ — сказочная страна, где среди песков бесконечной пустыни в небо взлетают небоскребы из стекла и металла; место, где старинные обычаи сочетаются с новейшими технологиями. Если вы любите отличный гостиничный сервис, шопинг с утра до вечера, купание в вечно теплом море и придирчивы к выбору развлечений — вам сюда. В Эмиратах находятся самый большой в мире аквариум, горнолыжный комплекс в пустыне, изумительной красоты мечети и, конечно же, множество торговых центров с тысячами магазинов. В ОАЭ не бывает плохой погоды и низкого сезона — ведь здесь что в ноябре, что в июле роскошные отели для качественного отдыха и отличный шоппинг по привлекательным ценам.",
+    "de": "Die VAE sind ein fabelhaftes Land, in dem inmitten des Sandes einer endlosen Wüste Wolkenkratzer aus Glas und Metall in den Himmel ragen. Ein Ort, an dem alte Bräuche mit der neuesten Technologie kombiniert werden. Wenn Sie exzellenten Hotelservice lieben, von morgens bis abends einkaufen, im ewig warmen Meer schwimmen und bei der Auswahl der Unterhaltung wählerisch sind, ist dies der richtige Ort für Sie. Die Emirate haben das größte Aquarium der Welt, ein Skigebiet in der Wüste, eine unglaublich schöne Moschee und natürlich viele Einkaufszentren mit Tausenden von Geschäften. In den VAE gibt es kein schlechtes Wetter oder Nebensaison - denn hier gibt es im November oder Juli Luxushotels für hochwertige Erholung und exzellente Einkaufsmöglichkeiten zu attraktiven Preisen",
+    "tr": "BAE, sonsuz bir çölün kumları arasında cam ve metal gökdelenlerin gökyüzüne yükseldiği muhteşem bir ülkedir; eski geleneklerin en son teknolojiyle birleştiği bir yer. Mükemmel otel hizmetini, sabahtan akşama alışveriş yapmayı, sonsuz ılık denizde yüzmeyi seviyorsanız ve eğlence seçimi konusunda seçici iseniz, burası tam size göre. Emirates, dünyanın en büyük akvaryumuna, çölde bir kayak merkezine, şaşırtıcı derecede güzel bir camiye ve tabii ki binlerce mağazanın bulunduğu birçok alışveriş merkezine sahiptir. BAE'de kötü hava veya düşük sezon yoktur - çünkü burada, Kasım veya Temmuz aylarında, kaliteli dinlenme ve cazip fiyatlarla mükemmel alışveriş için lüks oteller vardır."
+  },
+  "geo": [
+    24.4508,
+    54.34146
+  ],
+  "capitalgeo": [
+    25.2398,
+    55.2753
+  ],
+  "sliderimg": "https://i.pinimg.com/736x/ed/73/ed/ed73edcb6c94182bf8191556168dcdc0.jpg",
+  "zoom": 7
+},{
+  "_id": {
+    "$oid": "6049c7583cba373d7cbea59f"
+  },
+  "country": {
+    "en": "Germany",
+    "ru": "Германия",
+    "de": "Deutschland",
+    "tr": "Almanya"
+  },
+  "capital": {
+    "en": "Berlin",
+    "ru": "Берлин",
+    "de": "Berlin",
+    "tr": "Berlin"
+  },
+  "iso": "DE",
+  "timezone": 1,
+  "currency": "EUR",
+  "currencyname": {
+    "en": "Euro",
+    "ru": "Евро",
+    "de": "Euro",
+    "tr": "Euro"
+  },
+  "image": "https://cdn.tripzaza.com/ru/destinations/wp-content/uploads/2017/07/Depositphotos_29839405_m-2015-e1500438369759.jpg",
+  "video": "https://www.youtube.com/embed/y1UarPueBBM",
+  "text": {
+    "en": "Germany is an amazing country with a thousand-year history, where great artists lived and worked. This is a country of majestic nature and healing climate, beautiful places.",
+    "ru": "Германия —  это  удивительная страна с тысячелетней историей, где жили и творили великие деятели искусства. Это страна величественной природы и целебного климата, красивейших мест.",
+    "de": "Deutschland ist ein erstaunliches Land mit einer tausendjährigen Geschichte, in dem große Künstler lebten und arbeiteten. Dies ist ein Land von majestätischer Natur und heilendem Klima, schönen Orten.",
+    "tr": "Almanya, büyük sanatçıların yaşadığı ve çalıştığı, bin yıllık geçmişi olan muhteşem bir ülkedir. Burası görkemli doğası ve şifalı iklimi, güzel yerleri olan bir ülkedir."
+  },
+  "description": {
+    "en": "Germany is not just one of the most highly developed European states, it is also an amazing country with a thousand-year history, where great artists lived and worked. This is a country of majestic nature and healing climate, which is why health tourism is so widespread here. Germany annually attracts millions of tourists from all over the world with its magnificent landscapes, historical sights and incomparably delicious national cuisine. Not sure what to see in Germany? Especially for you, we have compiled a rating, which includes the most interesting sights of Germany. Every traveler will find something interesting in this country. Whether it's intimate concert halls or the trendiest nightclubs, national art galleries or automobile museums, noisy beer bars or old wine cellars.",
+    "ru": "Германия — это не просто одно из самых высокоразвитых европейских государств, это ещё и удивительная страна с тысячелетней историей, где жили и творили великие деятели искусства. Это страна величественной природы и целебного климата, благодаря чему здесь так распространён оздоровительный туризм. Германия ежегодно привлекает миллионы туристов со всех уголков света своими великолепными пейзажами, историческими достопримечательностями и несравненно вкусной национальной кухней. Не знаете, что посмотреть в Германии? Специально для Вас мы составили рейтинг, куда включили самые интересные достопримечательности Германии. Каждый путешественник найдёт в этой стране что-то интересное для себя. Будь то камерные концертные залы или самые модные ночные клубы, галереи национальной живописи или автомобильные музей, шумные пивные бары или старинные винные погреба.",
+    "de": "Deutschland ist nicht nur einer der am weitesten entwickelten europäischen Staaten, es ist auch ein erstaunliches Land mit einer tausendjährigen Geschichte, in dem große Künstler lebten und arbeiteten. Dies ist ein Land von majestätischer Natur und heilendem Klima, weshalb der Gesundheitstourismus hier so weit verbreitet ist. Deutschland zieht jährlich Millionen von Touristen aus aller Welt mit seinen herrlichen Landschaften, historischen Sehenswürdigkeiten und seiner unvergleichlich köstlichen nationalen Küche an. Sie sind sich nicht sicher, was Sie in Deutschland sehen sollen? Speziell für Sie haben wir eine Bewertung zusammengestellt, die die interessantesten Sehenswürdigkeiten Deutschlands enthält. Jeder Reisende wird in diesem Land etwas Interessantes finden. Ob intime Konzertsäle oder die angesagtesten Nachtclubs, nationale Kunstgalerien oder Automobilmuseen, laute Bierbars oder alte Weinkeller.",
+    "tr": "Almanya sadece en gelişmiş Avrupa devletlerinden biri değil, aynı zamanda büyük sanatçıların yaşadığı ve çalıştığı, bin yıllık bir tarihe sahip muhteşem bir ülke. Burası muhteşem doğaya ve şifalı bir iklime sahip bir ülkedir, bu yüzden sağlık turizmi burada çok yaygındır. Almanya, muhteşem manzaraları, tarihi mekanları ve eşsiz lezzetli ulusal mutfağı ile her yıl dünyanın her yerinden milyonlarca turisti çekmektedir. Almanya'da ne göreceğinizden emin değil misiniz? Özellikle sizin için Almanya'nın en ilginç manzaralarını içeren bir derecelendirme derledik. Bu ülkede her gezgin ilginç bir şeyler bulacaktır. İster samimi konser salonları, ister en popüler gece kulüpleri, ulusal sanat galerileri veya otomobil müzeleri, gürültülü bira barları veya eski şarap mahzenleri."
+  },
+  "geo": [
+    51.1549,
+    10.4869
+  ],
+  "capitalgeo": [
+    52.5188,
+    13.404
+  ],
+  "sliderimg": "https://i.pinimg.com/736x/e6/9f/ee/e69fee5cd4977bfcd22483d72315f5c6.jpg",
+  "zoom": 5
+},{
+  "_id": {
+    "$oid": "6049c7583cba373d7cbea5a1"
+  },
+  "country": {
+    "en": "Italy",
+    "ru": "Италия",
+    "de": "Italien",
+    "tr": "İtalya"
+  },
+  "capital": {
+    "en": "Rome",
+    "ru": "Рим",
+    "de": "Rom",
+    "tr": "Roma"
+  },
+  "iso": "IT",
+  "timezone": 1,
+  "currency": "EUR",
+  "currencyname": {
+    "en": "Euro",
+    "ru": "Евро",
+    "de": "Euro",
+    "tr": "Euro"
+  },
+  "image": "https://cdn.tripzaza.com/ru/destinations/wp-content/uploads/2017/04/Italy-2-Pantheon-in-rome-e1492905912264.jpg",
+  "video": "https://www.youtube.com/embed/C_QZstw0guQ",
+  "text": {
+    "en": "Italy is an amazing country where history and modernity, different eras and a rich cultural heritage, traditions and identity are intertwined.",
+    "ru": "Италия - удивительная страна, где переплетаются история и современность, разные эпохи и богатое культурное наследие, традиции и самобытность.",
+    "de": "Italien ist ein erstaunliches Land, in dem Geschichte und Moderne, verschiedene Epochen und ein reiches kulturelles Erbe, Traditionen und Identität miteinander verflochten sind.",
+    "tr": "İtalya, tarih ve modernliğin, farklı dönemlerin ve zengin bir kültürel mirasın, geleneklerin ve kimliğin iç içe geçtiği muhteşem bir ülkedir."
+  },
+  "description": {
+    "en": "Italy is a country that, along with France and Spain, is the center of international tourism: more than 50 million people visit its cities and resorts every year. Italy has 155 UNESCO World Heritage Sites - more than any other country in the world. At the present stage of development, Italy is an influential state with an excellently developed economy and industry. This country also stood at the origins of the formation of the European Union. Italy is an amazing country in which history and modernity, different eras and a rich cultural heritage, traditions and identity are intertwined.",
+    "ru": "Италия - страна, которая наряду с Францией и Испанией является центром международного туризма: ежегодно ее города и курорты посещают более 50 миллионов человек. В Италии 155 объектов всемирного наследия ЮНЕСКО - больше, чем в любой другой стране мира. На современном этапе развития Италия - влиятельное государство с прекрасно развитой экономикой и промышленностью. Эта страна также стояла у истоков образования Европейского Союза. Италия - удивительная страна, где переплетаются история и современность, разные эпохи и богатое культурное наследие, традиции и самобытность.",
+    "de": "Italien ist ein Land, das neben Frankreich und Spanien das Zentrum des internationalen Tourismus darstellt: Jedes Jahr besuchen mehr als 50 Millionen Menschen seine Städte und Resorts. Italien hat 155 UNESCO-Welterbestätten - mehr als jedes andere Land der Welt. In der gegenwärtigen Entwicklungsphase ist Italien ein einflussreicher Staat mit einer hervorragend entwickelten Wirtschaft und Industrie. Dieses Land stand auch an den Ursprüngen der Bildung der Europäischen Union. Italien ist ein erstaunliches Land, in dem Geschichte und Moderne, verschiedene Epochen und ein reiches kulturelles Erbe, Traditionen und Identität miteinander verflochten sind.",
+    "tr": "İtalya, Fransa ve İspanya ile birlikte uluslararası turizmin merkezi olan bir ülkedir: her yıl 50 milyondan fazla insan şehirlerini ve tatil beldelerini ziyaret etmektedir. İtalya, 155 UNESCO Dünya Mirası Sit Alanı'na sahiptir - dünyadaki diğer ülkelerden daha fazla. Mevcut gelişme aşamasında, İtalya iyi gelişmiş bir ekonomi ve endüstriye sahip etkili bir devlettir. Bu ülke aynı zamanda Avrupa Birliği'nin oluşumunun kökeninde de yer aldı. İtalya, tarih ve modernliğin, farklı dönemlerin ve zengin bir kültürel mirasın, geleneklerin ve kimliğin iç içe geçtiği muhteşem bir ülkedir."
+  },
+  "geo": [
+    42.34477,
+    13.33146
+  ],
+  "capitalgeo": [
+    41.9032,
+    12.49677
+  ],
+  "sliderimg": "https://i.pinimg.com/736x/8e/0f/51/8e0f51bcc2f554384f555f0e40fe0979.jpg",
+  "zoom": 5
+},{
+  "_id": {
+    "$oid": "6049c7583cba373d7cbea59d"
+  },
+  "country": {
+    "en": "Japan",
+    "ru": "Япония",
+    "de": "Japan"
+  },
+  "capital": {
+    "en": "Tokyo",
+    "ru": "Токио",
+    "de": "Tokio",
+    "tr": "Tokyo"
+  },
+  "iso": "JP",
+  "timezone": 9,
+  "currency": "JPY",
+  "currencyname": {
+    "en": "Japanese Yen",
+    "ru": "Японская йена",
+    "de": "Japanische YEN",
+    "tr": "Japon Yeni"
+  },
+  "image": "http://srednyvek.ru/img/224927_1600/59700728.jpg",
+  "video": "https://www.youtube.com/embed/WLIv7HnZ_fE",
+  "text": {
+    "en": "Japan is an amazing civilization that combines tradition and technological progress. Many people dream of visiting this truly unique place on our planet.",
+    "ru": "Япония – это удивительная цивилизация, сочетающая в себе традиционность и технический прогресс. Побывать в этом поистине уникальном месте нашей планеты мечтают многие.",
+    "de": "Japan ist eine erstaunliche Zivilisation, die Tradition und technologischen Fortschritt verbindet. Viele Menschen träumen davon, diesen wirklich einzigartigen Ort auf unserem Planeten zu besuchen.",
+    "tr": "Japonya, gelenek ve teknolojik ilerlemeyi birleştiren inanılmaz bir medeniyettir. Pek çok insan, gezegenimizdeki bu gerçekten eşsiz yeri ziyaret etmeyi hayal ediyor."
+  },
+  "description": {
+    "en": "Japan (Japanese 日本 Nihon, Nippon, literally “the place where the Sun rises” ), the official name is the State of Japan (Japanese 日本国 “Nihon Koku”, “Nippon Koku” (inf.)), - island state in East Asia. Located in the Pacific Ocean east of the Sea of Japan, China, North and South Korea, Russia. It occupies the territory from the Sea of Okhotsk in the north to the East China Sea and Taiwan in the south. The poetic name is the Land of the Rising Sun.",
+    "ru": "Япония (яп. 日本 Нихон, Ниппон, букв. «место, где восходит Солнце»), официальное название — Государство Япония (яп. 日本国 «Нихон коку», «Ниппон коку» (инф.)), — островное государство в Восточной Азии. Находится в Тихом океане к востоку от Японского моря, Китая, Северной и Южной Кореи, России. Занимает территорию от Охотского моря на севере до Восточно-Китайского моря и Тайваня на юге. Поэтическое название — Страна восходящего солнца.",
+    "de": "Japan (Japanisch ih Nihon, Nippon, wörtlich „der Ort, an dem die Sonne aufgeht“ ), der offizielle Name ist der Staat Japan (Japanisch 日本国 „Nihon Koku“, „Nippon Koku“ (inf.)), - Inselstaat in Ostasien. Das Hotel liegt im Pazifischen Ozean östlich des Japanischen Meeres, China, Nord- und Südkorea, Russland. Besetzt ein Gebiet vom Ochotskischen Meer im Norden bis zum Ostchinesischen Meer und Taiwan im Süden. Der poetische Name ist das Land der aufgehenden Sonne.",
+    "tr": "Japonya (Japonca 日本 Nihon, Nippon, kelimenin tam anlamıyla 'Güneşin doğduğu yer' ), resmi adı Japonya Eyaletidir (Japonca 日本国 'Nihon Koku', 'Nippon Koku' (inf.)), - Doğu Asya'daki ada devleti. Japonya Denizi, Çin, Kuzey ve Güney Kore, Rusya'nın doğusunda Pasifik Okyanusu'nda yer almaktadır. Kuzeyde Okhotsk Denizi'nden güneyde Doğu Çin Denizi ve Tayvan'a kadar bölgeyi kaplar. Şiirsel adı Yükselen Güneş Ülkesidir."
+  },
+  "geo": [
+    35.42,
+    139.33
+  ],
+  "capitalgeo": [
+    35.41,
+    139.41
+  ],
+  "sliderimg": "https://i.pinimg.com/736x/67/a1/a6/67a1a6070576b1dbac190993572dbf68.jpg",
+  "zoom": 5
+},{
+  "_id": {
+    "$oid": "6049c7583cba373d7cbea5a2"
+  },
+  "country": {
+    "en": "Turkey",
+    "ru": "Турция",
+    "de": "Türkei",
+    "tr": "Türkiye"
+  },
+  "capital": {
+    "en": "Ankara",
+    "ru": "Анкара",
+    "de": "Ankara",
+    "tr": "Ankara"
+  },
+  "iso": "TR",
+  "timezone": 3,
+  "currency": "TRY",
+  "currencyname": {
+    "en": "Turkish Lira",
+    "ru": "Турецкая лира",
+    "de": "Türkische Lira",
+    "tr": "Türk Lirası"
+  },
+  "image": "https://cdn.tripzaza.com/ru/destinations/wp-content/uploads/2018/08/Dostoprimechatelnosti-Stambula-e1533803524627.jpg",
+  "video": "https://www.youtube.com/embed/QfcsHWXpdx4",
+  "text": {
+    "en": "Turkey is an amazing country with a rich history. It is rightly called the crossroads of civilizations and cultures. The country is attractive for its warm seas, magnificent beaches, a large number of architectural monuments of great ancient civilizations.",
+    "ru": "Турция — удивительная страна с богатой историей. Ее справедливо называют перекрестком цивилизаций и культур. Страна привлекательна теплыми морями, великолепными пляжами, большим количеством архитектурных памятников великих древних цивилизаций.",
+    "de": "Die Türkei ist ein erstaunliches Land mit einer reichen Geschichte. Es wird zu Recht als Kreuzung von Zivilisationen und Kulturen bezeichnet. Das Land ist attraktiv für sein warmes Meer, die herrlichen Strände und die zahlreichen architektonischen Denkmäler großer antiker Zivilisationen.",
+    "tr": "Türkiye zengin bir tarihe sahip muhteşem bir ülke. Haklı olarak medeniyetlerin ve kültürlerin kavşağı denir. Ülke, sıcak denizleri, muhteşem plajları, büyük antik uygarlıkların çok sayıda mimari eseri ile çekicidir."
+  },
+  "description": {
+    "en": "Turkey is an amazing country with a rich history. It is rightly called the crossroads of civilizations and cultures. The country is attractive not only for its warm seas, magnificent beaches and hot sun, but also for a large number of architectural monuments of great ancient civilizations. Holidays in Turkey are diverse: Istanbul will amaze you with the ruins of ancient cities, Roman amphitheaters, ancient Byzantine temples and mosques of the Ottoman Empire; Antalya is famous for its active nightlife, bars, restaurants and clubs; hot springs of Yalova and salt terraces of Pamukkale will help to improve your health; protected areas and beautiful landscapes of Cappadocia ensure a serene relaxation in the bosom of nature.",
+    "ru": "Турция — удивительная страна с богатой историей. Ее справедливо называют перекрестком цивилизаций и культур. Страна привлекательна не только теплыми морями, великолепными пляжами и жарким солнцем, но и большим количеством архитектурных памятников великих древних цивилизаций. Отдых в Турции отличается разнообразием: Стамбул поразит руинами античных городов, римскими амфитеатрами, древними византийскими храмами и мечетями Османской империи; Анталия славится активной ночной жизнью, барами, ресторанами и клубами; горячие источники Яловы и соляные террасы Памуккале помогут оздоровиться; заповедные зоны и прекрасные пейзажи Каппадокии обеспечат безмятежный отдых на лоне природы.",
+    "de": "Die Türkei ist ein erstaunliches Land mit einer reichen Geschichte. Es wird zu Recht als Kreuzung von Zivilisationen und Kulturen bezeichnet. Das Land ist nicht nur wegen seiner warmen See, der herrlichen Strände und der heißen Sonne attraktiv, sondern auch wegen einer Vielzahl von architektonischen Denkmälern großer antiker Zivilisationen. Die Ferien in der Türkei sind vielfältig: Istanbul wird Sie mit den Ruinen antiker Städte, römischer Amphitheater, antiker byzantinischer Tempel und Moscheen des Osmanischen Reiches in Erstaunen versetzen. Antalya ist berühmt für sein aktives Nachtleben, Bars, Restaurants und Clubs. Die heißen Quellen von Yalova und die Salzterrassen von Pamukkale tragen zur Verbesserung Ihrer Gesundheit bei. Schutzgebiete und wunderschöne Landschaften Kappadokiens sorgen für eine ruhige Entspannung im Herzen der Natur.",
+    "tr": "Türkiye zengin bir tarihe sahip muhteşem bir ülkedir. Haklı olarak medeniyetlerin ve kültürlerin kavşağı olarak adlandırılır. Ülke sadece ılık denizleri, muhteşem kumsalları ve sıcak güneşi ile değil, aynı zamanda büyük eski uygarlıkların çok sayıda mimari eseri için de çekici. Türkiye'de tatiller çeşitlidir: İstanbul sizi antik kentlerin kalıntıları, Roma amfitiyatroları, antik Bizans tapınakları ve Osmanlı İmparatorluğu'nun camileriyle şaşırtacak; Antalya hareketli gece hayatı, barları, restoranları ve kulüpleriyle ünlüdür; Yalova kaplıcaları ve Pamukkale'nin tuz terasları sağlığınızı iyileştirmeye; Kapadokya'nın korunan alanları ve güzel manzaraları, doğanın koynunda dingin bir rahatlama sağlar."
+  },
+  "geo": [
+    39.1952,
+    35.42229
+  ],
+  "capitalgeo": [
+    39.93244,
+    32.8508
+  ],
+  "sliderimg": "https://i.pinimg.com/736x/d2/94/30/d294307ec58211e4227628a9b9960bcc--mosque-istanbul.jpg",
+  "zoom": 5
+},{
+  "_id": {
+    "$oid": "6049c7583cba373d7cbea5a4"
+  },
+  "country": {
+    "en": "Switzerland",
+    "ru": "Швейцария",
+    "de": "Schweiz",
+    "tr": "İsviçre"
+  },
+  "capital": {
+    "en": "Berne",
+    "ru": "Берн",
+    "de": "Bern",
+    "tr": "Bern"
+  },
+  "iso": "CH",
+  "timezone": 1,
+  "currency": "CHF",
+  "currencyname": {
+    "en": "Swiss frank",
+    "ru": "Швейцарский франк",
+    "de": "Schweizer Frank",
+    "tr": "İsviçre frangı"
+  },
+  "image": "https://cdn.tripzaza.com/ru/destinations/wp-content/uploads/2018/05/Dostoprimechatelnosti-SHvei--tsarii-e1526363471542.jpg",
+  "video": "https://www.youtube.com/embed/TWDb5MhjyoE",
+  "text": {
+    "en": "Switzerland is one of the most developed countries in the world, with the highest nominal adult wealth. The country is famous for its ski resorts and hiking trails.",
+    "ru": "Швейцария — одна из самых развитых стран мира, с самым высоким номинальным богатством взрослого населения. Страна славится своими горнолыжными курортами и пешеходными маршрутами.",
+    "de": "Die Schweiz ist eines der am weitesten entwickelten Länder der Welt mit dem höchsten nominalen Wohlstand für Erwachsene. Das Land ist berühmt für seine Skigebiete und Wanderwege.",
+    "tr": "İsviçre, en yüksek nominal yetişkin servetine sahip, dünyanın en gelişmiş ülkelerinden biridir. Ülke, kayak merkezleri ve yürüyüş parkurları ile ünlüdür."
+  },
+  "description": {
+    "en": "Switzerland is one of the most developed countries in the world, with the highest nominal adult wealth. The country is famous for its ski resorts and hiking trails. Banking and financial institutions play a leading role in the country's economy, and Swiss watches and chocolate are famous all over the world. Switzerland's attractions showcase the country's natural and man-made wealth. Sometimes it is difficult to understand how they all fit in such a small area. A trip to Switzerland will definitely be remembered for a lifetime, because it is rich in unique architectural monuments, beautiful lakes, mountain ranges. Every medieval town in this country deserves attention.",
+    "ru": "Швейцария — одна из самых развитых стран мира, с самым высоким номинальным богатством взрослого населения. Страна славится своими горнолыжными курортами и пешеходными маршрутами. Банковские и финансовые учреждения играют ведущую роль в экономике страны, а швейцарские часы и шоколад известны во всем мире.Достопримечательности Швейцарии демонстрируют природное и рукотворное богатство страны. Иногда сложно понять, как они все умещаются на такой небольшой площади. Поездка в Швейцарию однозначно запомнится вам на всю жизнь, потому что она богата уникальными архитектурными памятниками, красивыми озерами, горными хребтами. Внимания заслуживает каждый средневековый городок этой страны.",
+    "de": "Die Schweiz ist eines der am weitesten entwickelten Länder der Welt mit dem höchsten nominalen Wohlstand für Erwachsene. Das Land ist berühmt für seine Skigebiete und Wanderwege. Bank- und Finanzinstitute spielen eine führende Rolle in der Wirtschaft des Landes, und Schweizer Uhren und Schokolade sind auf der ganzen Welt bekannt. Die Attraktionen der Schweiz zeigen den natürlichen und vom Menschen geschaffenen Reichtum des Landes. Manchmal ist es schwierig zu verstehen, wie sie alle in einen so kleinen Bereich passen. Eine Reise in die Schweiz wird ein Leben lang in Erinnerung bleiben, denn sie ist reich an einzigartigen architektonischen Denkmälern, wunderschönen Seen und Gebirgszügen. Jede mittelalterliche Stadt in diesem Land verdient Aufmerksamkeit.",
+    "tr": "İsviçre, en yüksek nominal yetişkin servetine sahip, dünyanın en gelişmiş ülkelerinden biridir. Ülke, kayak merkezleri ve yürüyüş parkurları ile ünlüdür. Bankacılık ve finans kurumları ülke ekonomisinde öncü bir rol oynamaktadır ve İsviçre saatleri ve çikolataları tüm dünyada ünlüdür.İsviçre'nin cazibe merkezleri ülkenin doğal ve insan yapımı zenginliğini sergilemektedir. Bazen hepsinin bu kadar küçük bir alana nasıl sığdığını anlamak zordur. İsviçre'ye yapılacak bir gezi kesinlikle bir ömür boyu hatırlanacak çünkü eşsiz mimari anıtlar, güzel göller, dağ sıraları bakımından zengindir. Bu ülkedeki her ortaçağ kasabası ilgiyi hak ediyor."
+  },
+  "geo": [
+    46.82495,
+    8.0599
+  ],
+  "capitalgeo": [
+    46.9558,
+    7.44913
+  ],
+  "sliderimg": "https://i.pinimg.com/736x/f1/48/db/f148dbad692abd4a7701324898ff823d.jpg",
+  "zoom": 6
+},{
+  "_id": {
+    "$oid": "6049c7583cba373d7cbea59e"
+  },
+  "country": {
+    "en": "Australia",
+    "ru": "Австралия",
+    "de": "Australien",
+    "tr": "Avustralya"
+  },
+  "capital": {
+    "en": "Canberra",
+    "ru": "Канберра",
+    "de": "Canberra",
+    "tr": "Canberra"
+  },
+  "iso": "AU",
+  "timezone": 11,
+  "currency": "AUD",
+  "currencyname": {
+    "en": "Australian Dollar",
+    "ru": "Австралийский доллар",
+    "de": "Australischer Dollar",
+    "tr": "Avustralya doları"
+  },
+  "image": "https://cdn.tripzaza.com/ru/destinations/wp-content/uploads/2017/04/Australia-6-Sydney-opera-house-e1491974775111.jpg",
+  "video": "https://www.youtube.com/embed/vUF7ja9ehIs",
+  "text": {
+    "en": "Australia is a unique country, hospitable and extraordinarily beautiful land that contains true riches, including rare natural phenomena, as well as amazing representatives of flora and fauna. Australia's natural attractions are striking in their beauty. ",
+    "ru": "Австралия — это уникальная страна, гостеприимная и необычайно красивая земля, которая хранит в себе истинные богатства. Природные достопримечательности Австралии поражают своей красотой.",
+    "de": "Australien ist ein einzigartiges Land, ein gastfreundliches und außergewöhnlich schönes Land, das wahren Reichtum besitzt. Australiens natürliche Attraktionen bestechen durch ihre Schönheit.",
+    "tr": "Avustralya, gerçek serveti elinde tutan eşsiz bir ülke, misafirperver ve olağanüstü derecede güzel bir ülkedir. Avustralya'nın doğal güzellikleri güzelliği ile dikkat çekicidir."
+  },
+  "description": {
+    "en": "Australia is a unique country, hospitable and extraordinarily beautiful land that contains true riches, including rare natural phenomena, as well as amazing representatives of flora and fauna. Australia's natural attractions are striking in their beauty. The unspoiled nature here contrasts with the most modern metropolitan areas. Scuba diving and golf lovers from all over the world come here, while adventure lovers follow the routes of local discoverers again and again. In short, these lands are a real treasure for tourists from all over the world. You just need to plan the route in advance, and in this you will be provided with invaluable assistance by local guides who will do everything to make your trip rich and full of impressions.",
+    "ru": "Австралия — это уникальная страна, гостеприимная и необычайно красивая земля, которая хранит в себе истинные богатства, включая редкие природные явления, а также удивительных представителей флоры и фауны. Природные достопримечательности Австралии поражают своей красотой. Нетронутая природа здесь контрастирует с самыми современными мегаполисами. Сюда со всего мира стремятся любители подводного плавания и гольфа, а любители приключений вновь и вновь следуют маршрутам местных первооткрывателей. Словом, эти земли — настоящее сокровище для туристов со всего света. Необходимо лишь заранее спланировать маршрут, и в этом Вам окажут неоценимую помощь местные экскурсоводы, которые сделают всё, чтобы Ваше путешествие было насыщенным и полным впечатлений.",
+    "de": "Australien ist ein einzigartiges Land, ein gastfreundliches und außergewöhnlich schönes Land, das wahre Reichtümer, einschließlich seltener Naturphänomene, sowie erstaunliche Vertreter der Flora und Fauna bewahrt. Australiens natürliche Attraktionen bestechen durch ihre Schönheit. Die unberührte Natur steht hier im Kontrast zu den modernsten Ballungsräumen. Taucher und Golfliebhaber aus aller Welt kommen hierher, während Abenteuerliebhaber immer wieder den Routen lokaler Entdecker folgen. Kurz gesagt, diese Länder sind ein wahrer Schatz für Touristen aus aller Welt. Sie müssen die Route nur im Voraus planen, und dabei erhalten Sie wertvolle Unterstützung von lokalen Reiseleitern, die alles tun, um Ihre Reise reich und voller Eindrücke zu machen.",
+    "tr": "Avustralya, nadir doğal fenomenler ve şaşırtıcı flora ve fauna temsilcileri de dahil olmak üzere gerçek zenginlikler içeren eşsiz bir ülke, misafirperver ve olağanüstü güzel bir ülkedir. Avustralya'nın doğal güzellikleri güzelliğiyle dikkat çekiyor. Buradaki bozulmamış doğa, en modern metropollerle tezat oluşturuyor. Dünyanın dört bir yanından tüplü dalış ve golf severler buraya gelirken, macera severler yerel kaşiflerin rotalarını tekrar tekrar takip ediyor. Kısacası, bu topraklar dünyanın her yerinden turistler için gerçek bir hazinedir. Sadece rotayı önceden planlamanız gerekiyor ve bunda, seyahatinizi zengin ve izlenimlerle dolu hale getirmek için her şeyi yapacak yerel rehberler tarafından paha biçilmez bir yardım sağlanacak."
+  },
+  "geo": [
+    -23.716622,
+    133.387857
+  ],
+  "capitalgeo": [
+    -35.2876,
+    149.124
+  ],
+  "sliderimg": "https://i.pinimg.com/originals/5a/28/c0/5a28c06aba79e781dc61867f5326b3c6.jpg",
+  "zoom": 4
+}]

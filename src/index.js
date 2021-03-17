@@ -8,9 +8,7 @@ const port = process.env.PORT || 8000;
 const poolSize = 100;
 
 MongoClient.connect(process.env.TRAVEL_DB_URI, {
-  // poolSize,
   useNewUrlParser: true,
-  // writeConcern: { wtimeout: 5000 },
   useUnifiedTopology: true,
 })
   .catch((err) => {

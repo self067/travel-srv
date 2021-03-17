@@ -20,6 +20,11 @@ export class User {
       preferences: this.preferences,
     };
   }
+  toJJson() {
+    return {
+      email: this.email,
+    };
+  }
   async comparePassword(plainText) {
     return await bcrypt.compare(plainText, this.password);
   }
@@ -27,7 +32,7 @@ export class User {
     return jwt.sign(
       {
         exp: Math.floor(Date.now() / 1000) + 60 * 60 * 4,
-        ...this.toJson(),
+        ...this.toJJson(),
       },
       process.env.SECRET_KEY
     );
@@ -107,8 +112,8 @@ export default class UserController {
         res.status(401).json({ error: 'Make sure your email is correct.' });
         return;
       }
-      const user = new User(userData);
 
+      const user = new User(userData);
       if (!(await user.comparePassword(password))) {
         res.status(401).json({ error: 'Make sure your password is correct.' });
         return;
@@ -118,11 +123,16 @@ export default class UserController {
         user.email,
         user.encoded()
       );
+
       if (!loginResponse.success) {
         res.status(500).json({ error: loginResponse.error });
         return;
       }
-      res.json({ auth_token: user.encoded(), info: user.toJson() });
+
+      res.json({
+        auth_token: user.encoded(),
+        info: user.toJson(),
+      });
     } catch (e) {
       res.status(400).json({ error: e });
       return;
@@ -168,7 +178,7 @@ export default class UserController {
       const updatedUser = new User(userFromDB);
 
       res.json({
-        auth_token: updatedUser.encoded(),
+        auth_token: user.encoded(),
         info: updatedUser.toJson(),
       });
     } catch (e) {

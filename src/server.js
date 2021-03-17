@@ -7,7 +7,6 @@ import YAML from 'yamljs';
 import path from 'path';
 import countries from './api/countries.route';
 import users from './api/users.route';
-// import sights from './api/sights.route'; //  ???
 
 const swaggerDocument = YAML.load(path.join(__dirname, 'doc/travelsrv.yaml'));
 const app = express();
