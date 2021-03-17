@@ -3,6 +3,7 @@ info:
   title: Travel App API
   version: '1.0'
 servers:
+  - url: https://travel-srv.herokuapp.com/
   - url: http://localhost:5000/
 paths:
   /countries:

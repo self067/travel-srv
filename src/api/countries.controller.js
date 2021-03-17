@@ -102,7 +102,7 @@ export default class CountriesController {
     res.json(response);
   }
 
-  static async apiFacetedSearch(req, res, next) {
+  static async apiLiveSearch(req, res, next) {
     const COUNTRIES_PER_PAGE = 20;
 
     let page;
@@ -120,22 +120,21 @@ export default class CountriesController {
         ? { cast: new RegExp(req.query.cast, 'i') }
         : { cast: 'Tom Hanks' };
 
-    const facetedSearchResult = await CountriesDAO.facetedSearch({
+    const liveSearchResult = await CountriesDAO.liveSearch({
       filters,
       page,
       COUNTRIES_PER_PAGE,
     });
 
     let response = {
-      countries: facetedSearchResult.countries,
+      countries: liveSearchResult.countries,
       facets: {
-        runtime: facetedSearchResult.runtime,
-        rating: facetedSearchResult.rating,
+        countries: liveSearchResult.countries,
       },
       page: page,
       filters,
       entries_per_page: COUNTRIES_PER_PAGE,
-      total_results: facetedSearchResult.count,
+      total_results: liveSearchResult.count,
     };
 
     res.json(response);

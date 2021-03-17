@@ -14,31 +14,15 @@ export default class UsersDAO {
     }
   }
 
-  /**
-   * Finds a user in the `users` collection
-   * @param {string} email - The email of the desired user
-   * @returns {Object | null} Returns either a single user or nothing
-   */
   static async getUser(email) {
-    // Retrieve the user document corresponding with the user's email.
     return await users.findOne({ email: email });
   }
 
-  /**
-   * Adds a user to the `users` collection
-   * @param {UserInfo} userInfo - The information of the user to add
-   * @returns {DAOResponse} Returns either a "success" or an "error" Object
-   */
   static async addUser(userInfo) {
-    let { name, email, password } = userInfo;
+    let { name, email, password, avatar } = userInfo;
 
     try {
-      // Insert a user with the "name", "email", and "password" fields.
-      // Use a more durable Write Concern for this operation.
-      await users.insertOne(
-        { name: name, email: email, password: password },
-        { writeConcern: { w: 'majority' } }
-      );
+      await users.insertOne({ name, email, password, avatar });
       return { success: true };
     } catch (e) {
       if (String(e).startsWith('MongoError: E11000 duplicate key error')) {
@@ -49,16 +33,8 @@ export default class UsersDAO {
     }
   }
 
-  /**
-   * Adds a user to the `sessions` collection
-   * @param {string} email - The email of the user to login
-   * @param {string} jwt - A JSON web token representing the user's claims
-   * @returns {DAOResponse} Returns either a "success" or an "error" Object
-   */
   static async loginUser(email, jwt) {
     try {
-      // Use an UPSERT statement to update the "jwt" field in the document,
-      // matching the "user_id" field with the email passed to this function.
       await sessions.updateOne(
         { user_id: email },
         { $set: { jwt: jwt, user_id: email } },
@@ -71,14 +47,8 @@ export default class UsersDAO {
     }
   }
 
-  /**
-   * Removes a user from the `sessons` collection
-   * @param {string} email - The email of the user to logout
-   * @returns {DAOResponse} Returns either a "success" or an "error" Object
-   */
   static async logoutUser(email) {
     try {
-      // Delete the document in the `sessions` collection matching the email.
       await sessions.deleteOne({ user_id: email });
       return { success: true };
     } catch (e) {
@@ -87,15 +57,8 @@ export default class UsersDAO {
     }
   }
 
-  /**
-   * Gets a user from the `sessions` collection
-   * @param {string} email - The email of the user to search for in `sessions`
-   * @returns {Object | null} Returns a user session Object, an "error" Object
-   * if something went wrong, or null if user was not found.
-   */
   static async getUserSession(email) {
     try {
-      // Retrieve the session document corresponding with the user's email.
       return sessions.findOne({ user_id: email });
     } catch (e) {
       console.error(`Error occurred while retrieving user session, ${e}`);
@@ -103,46 +66,9 @@ export default class UsersDAO {
     }
   }
 
-  /**
-   * Removes a user from the `sessions` and `users` collections
-   * @param {string} email - The email of the user to delete
-   * @returns {DAOResponse} Returns either a "success" or an "error" Object
-   */
-  static async deleteUser(email) {
-    try {
-      await users.deleteOne({ email });
-      await sessions.deleteOne({ user_id: email });
-      if (!(await this.getUser(email)) && !(await this.getUserSession(email))) {
-        return { success: true };
-      } else {
-        console.error(`Deletion unsuccessful`);
-        return { error: `Deletion unsuccessful` };
-      }
-    } catch (e) {
-      console.error(`Error occurred while deleting user, ${e}`);
-      return { error: e };
-    }
-  }
-
-  /**
-   * Given a user's email and an object of new preferences, update that user's
-   * data to include those preferences.
-   * @param {string} email - The email of the user to update.
-   * @param {Object} preferences - The preferences to include in the user's data.
-   * @returns {DAOResponse}
-   */
   static async updatePreferences(email, preferences) {
     try {
-      /**
-      Ticket: User Preferences
-
-      Update the "preferences" field in the corresponding user's document to
-      reflect the new information in preferences.
-      */
-
       preferences = preferences || {};
-
-      // Use the data in "preferences" to update the user's preferences.
       const updateResponse = await users.updateOne(
         { email: email },
         { $set: { preferences: preferences } }
@@ -159,40 +85,4 @@ export default class UsersDAO {
       return { error: e };
     }
   }
-
-  static async checkAdmin(email) {
-    try {
-      const { isAdmin } = await this.getUser(email);
-      return isAdmin || false;
-    } catch (e) {
-      return { error: e };
-    }
-  }
-
-  static async makeAdmin(email) {
-    try {
-      const updateResponse = users.updateOne(
-        { email },
-        { $set: { isAdmin: true } }
-      );
-      return updateResponse;
-    } catch (e) {
-      return { error: e };
-    }
-  }
 }
-
-/**
- * Parameter passed to addUser method
- * @typedef UserInfo
- * @property {string} name
- * @property {string} email
- * @property {string} password
- */
-
-/**
- * Success/Error return object
- * @typedef DAOResponse
- * @property {boolean} [success] - Success
- * @property {string} [error] - Error
- */
