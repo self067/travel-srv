@@ -19,11 +19,6 @@ export default class CountriesDAO {
     }
   }
 
-  /**
-   * Returns a list of objects, each object contains a title and an _id.
-   * @param {string[]} params
-   * @returns {Promise<CountryResult>} A promise that will resolve to a list of CountryResults.
-   */
   static async getCountriesByParam(params) {
     let cursor;
     try {
@@ -34,57 +29,14 @@ export default class CountriesDAO {
       console.error(`Unable to issue find command, ${e}`);
       return [];
     }
-
     return cursor.toArray();
   }
 
-  /**
-   * Finds and returns countries matching a given text in their title or description.
-   * @param {string} text - The text to match with.
-   * @returns {QueryParams} The QueryParams for text search
-   */
   static textSearchQuery(text) {
     const query = { $text: { $search: text } };
     const meta_score = { $meta: 'textScore' };
     const sort = [['score', meta_score]];
     const project = { score: meta_score };
-
-    return { query, project, sort };
-  }
-
-  /**
-   * Finds and returns countries including one or more cast members.
-   * @param {string[]} cast - The cast members to match with.
-   * @returns {QueryParams} The QueryParams for cast search
-   */
-  static castSearchQuery(cast) {
-    const searchCast = Array.isArray(cast) ? cast : cast.split(', ');
-
-    const query = { cast: { $in: searchCast } };
-    const project = {};
-    const sort = DEFAULT_SORT;
-
-    return { query, project, sort };
-  }
-
-  /**
-   * Finds and returns countries matching a one or more genres.
-   * @param {string[]} genre - The genres to match with.
-   * @returns {QueryParams} The QueryParams for genre search
-   */
-  static genreSearchQuery(genre) {
-    /**
-    Ticket: Text and Subfield Search
-
-    Given an array of one or more genres, construct a query that searches
-    MongoDB for countries with that genre.
-    */
-
-    const searchGenre = Array.isArray(genre) ? genre : genre.split(', ');
-    const query = { genres: { $in: searchGenre } };
-    const project = {};
-    const sort = DEFAULT_SORT;
-
     return { query, project, sort };
   }
 
@@ -94,9 +46,8 @@ export default class CountriesDAO {
    * in the form of `{cast: { $in: [...castMembers]}}`
    * @param {number} page - The page of countries to retrieve.
    * @param {number} countriesPerPage - The number of countries to display per page.
-   * @returns {FacetedSearchReturn} FacetedSearchReturn
    */
-  static async facetedSearch({
+  static async liveSearch({
     filters = null,
     page = 0,
     countriesPerPage = 20,
@@ -109,32 +60,8 @@ export default class CountriesDAO {
     const countingPipeline = [matchStage, sortStage, { $count: 'count' }];
     const skipStage = { $skip: countriesPerPage * page };
     const limitStage = { $limit: countriesPerPage };
-    const facetStage = {
+    const liveStage = {
       $facet: {
-        runtime: [
-          {
-            $bucket: {
-              groupBy: '$runtime',
-              boundaries: [0, 60, 90, 120, 180],
-              default: 'other',
-              output: {
-                count: { $sum: 1 },
-              },
-            },
-          },
-        ],
-        rating: [
-          {
-            $bucket: {
-              groupBy: '$metacritic',
-              boundaries: [0, 50, 70, 90, 100],
-              default: 'other',
-              output: {
-                count: { $sum: 1 },
-              },
-            },
-          },
-        ],
         countries: [
           {
             $addFields: {
@@ -150,7 +77,7 @@ export default class CountriesDAO {
       sortStage,
       skipStage,
       limitStage,
-      facetStage,
+      liveStage,
     ];
 
     try {
@@ -165,15 +92,6 @@ export default class CountriesDAO {
     }
   }
 
-  /**
-   * Finds and returns countries by param.
-   * Returns a list of objects, each object contains a title and an _id.
-   * @param {Object} filters - The search parameters to use in the query.
-   * @param {number} page - The page of countries to retrieve.
-   * @param {number} countriesPerPage - The number of countries to display per page.
-   * @returns {GetCountriesResult} An object with country results and total results
-   * that would match this query
-   */
   static async getCountries({
     filters = null,
     page = 0,
@@ -183,10 +101,6 @@ export default class CountriesDAO {
     if (filters) {
       if ('text' in filters) {
         queryParams = this.textSearchQuery(filters['text']);
-      } else if ('cast' in filters) {
-        queryParams = this.castSearchQuery(filters['cast']);
-      } else if ('genre' in filters) {
-        queryParams = this.genreSearchQuery(filters['genre']);
       }
     }
 
@@ -216,12 +130,6 @@ export default class CountriesDAO {
       return { countriesList: [], totalNumCountries: 0 };
     }
   }
-
-  /**
-   * Gets a coutry by its id
-   * @param {string} id - The desired country id, the _id in Mongo
-   * @returns {TravelCountry | null} Returns either a single country or nothing
-   */
 
   static async getCountryByID(id) {
     try {
