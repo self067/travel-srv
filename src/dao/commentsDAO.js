@@ -33,7 +33,7 @@ export default class CommentsDAO {
   static async addComment(sightId, email, rating, comment, date) {
     try {
       const commentDoc = {
-        sight_id: ObjectId(sightId),
+        sightId: ObjectId(sightId),
         email,
         rating,
         comment,

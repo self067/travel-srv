@@ -17,17 +17,6 @@ export default class CountriesController {
     res.json(response);
   }
 
-  static async apiGetCountriesByParams(req, res, next) {
-    // params was countries
-    let params = req.query.params == '' ? 'USA' : req.query.params;
-    let paramList = Array.isArray(params) ? params : Array(params);
-    let countriesList = await CountriesDAO.getCountriesByParam(paramList);
-    let response = {
-      titles: countriesList,
-    };
-    res.json(response);
-  }
-
   static async apiGetCountryById(req, res, next) {
     try {
       let id = req.params.id || {};
@@ -42,101 +31,5 @@ export default class CountriesController {
       console.log(`api, ${e}`);
       res.status(500).json({ error: e });
     }
-  }
-
-  static async apiSearchCountries(req, res, next) {
-    const COUNTRIES_PER_PAGE = 20;
-    let page;
-    try {
-      page = req.query.page ? parseInt(req.query.page, 10) : 0;
-    } catch (e) {
-      console.error(`Got bad value for page:, ${e}`);
-      page = 0;
-    }
-    let searchType;
-    try {
-      searchType = Object.keys(req.query)[0];
-    } catch (e) {
-      console.error(`No search keys specified: ${e}`);
-    }
-
-    let filters = {};
-
-    switch (searchType) {
-      case 'genre':
-        if (req.query.genre !== '') {
-          filters.genre = req.query.genre;
-        }
-        break;
-      case 'cast':
-        if (req.query.cast !== '') {
-          filters.cast = req.query.cast;
-        }
-        break;
-      case 'text':
-        if (req.query.text !== '') {
-          filters.text = req.query.text;
-        }
-        break;
-      default:
-      // nothing to do
-    }
-
-    const {
-      countriesList,
-      totalNumCountries,
-    } = await CountriesDAO.getCountries({
-      filters,
-      page,
-      COUNTRIES_PER_PAGE,
-    });
-
-    let response = {
-      countries: countriesList,
-      page: page,
-      filters,
-      entries_per_page: COUNTRIES_PER_PAGE,
-      total_results: totalNumCountries,
-    };
-
-    res.json(response);
-  }
-
-  static async apiLiveSearch(req, res, next) {
-    const COUNTRIES_PER_PAGE = 20;
-
-    let page;
-    try {
-      page = req.query.page ? parseInt(req.query.page, 10) : 0;
-    } catch (e) {
-      console.error(`Got bad value for page, defaulting to 0: ${e}`);
-      page = 0;
-    }
-
-    let filters = {};
-
-    filters =
-      req.query.cast !== ''
-        ? { cast: new RegExp(req.query.cast, 'i') }
-        : { cast: 'Tom Hanks' };
-
-    const liveSearchResult = await CountriesDAO.liveSearch({
-      filters,
-      page,
-      COUNTRIES_PER_PAGE,
-    });
-
-    let response = {
-      countries: liveSearchResult.countries,
-      facets: {
-        countries: liveSearchResult.countries,
-      },
-      page: page,
-      filters,
-      entries_per_page: COUNTRIES_PER_PAGE,
-      total_results: liveSearchResult.count,
-    };
-
-    res.json(response);
   }
 }

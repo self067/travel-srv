@@ -16,7 +16,7 @@ export default class CommentsController {
       }
 
       const email = user.email;
-      const sightId = req.body.sight_id;
+      const sightId = req.body.sightId;
       const rating = req.body.rating;
       const comment = req.body.comment;
       const date = new Date();
